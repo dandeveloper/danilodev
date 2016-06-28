@@ -16,8 +16,12 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <!-- <%= f.label :body %><br>
+    <%= f.text_area :body %> -->
+
+    <%= f.cktext_area :body, :class => 'someclass', :ckeditor => {:language => 'en'} %>
+    <!-- <%= f.cktext_area :content, :value => 'Default value', :id => 'sometext'  %>
+    <%= cktext_area :page, :info, :cols => 40, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %> -->
   </div>
   <div class="actions">
     <%= f.submit %>
