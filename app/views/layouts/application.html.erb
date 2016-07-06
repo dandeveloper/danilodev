@@ -7,7 +7,10 @@
 </head>
 <body>
   <% if user_signed_in? %>
-    <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+    <div class="novo-post-wrapper">
+      <%= link_to "Novo Post", new_post_path, class: "novo-post-btn" %>
+    </div>
+    <%= link_to "Sair", destroy_user_session_path, class: 'btn-logout',  :method => :delete %>
   <% else %>
     <%= link_to "Login", new_user_session_path %>
   <% end %>
